@@ -20,6 +20,10 @@ LOCAL_CFLAGS := -DRIL_SHLIB
 LOCAL_MODULE:= rild
 LOCAL_MODULE_TAGS := optional
 
+ifeq ($(TARGET_USE_VENDOR_RIL), true)
+LOCAL_CFLAGS += -DTARGET_USE_VENDOR_RIL
+endif
+
 include $(BUILD_EXECUTABLE)
 
 # For radiooptions binary

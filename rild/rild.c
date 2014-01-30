@@ -134,7 +134,7 @@ int main(int argc, char **argv)
     }
 
     /* special override when in the emulator */
-#if 1
+#ifndef TARGET_USE_VENDOR_RIL
     {
         static char*  arg_overrides[3];
         static char   arg_device[32];
